@@ -131,7 +131,7 @@ app.get("/districts/:districtId/details/", async (request, response) => {
         SELECT state_name AS stateName
         FROM state
         WHERE state_id = ${stateIdRes.state_id};`;
-  const stateNameRes = await db.get(stateNameQuery);
+  const stateNameRes = await database.get(stateNameQuery);
   response.send(stateNameRes);
 });
 
